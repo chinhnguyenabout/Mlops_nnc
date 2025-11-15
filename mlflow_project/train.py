@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score, f1_score
 import numpy as np
 
 mlflow.set_tracking_uri("file:./mlruns")  # Lưu log cục bộ
-mlflow.set_experiment("lpak_classification")
+mlflow.set_experiment("nnc_classification")
 
 def train_and_log_model(n_estimators, max_depth):
     X, y = make_classification(
@@ -34,7 +34,7 @@ def train_and_log_model(n_estimators, max_depth):
         mlflow.log_metric("accuracy", acc)
         mlflow.log_metric("f1_score", f1)
 
-        mlflow.sklearn.log_model(model, "lpak_model")
+        mlflow.sklearn.log_model(model, "nnc_model")
 
         print(f"n_estimators={n_estimators}, max_depth={max_depth}, acc={acc:.4f}, f1={f1:.4f}")
         return acc, f1, mlflow.active_run().info.run_id
@@ -53,8 +53,8 @@ if __name__ == "__main__":
 
     # Đăng ký model tốt nhất vào Registry
     mlflow.register_model(
-        f"runs:/{best_run}/lpak_model",
-        "lpak_classifier"
+        f"runs:/{best_run}/nnc_model",
+        "nnc_classifier"
     )
 
     print(f"✅ Best model logged & registered from run {best_run}")

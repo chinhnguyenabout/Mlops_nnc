@@ -1,5 +1,5 @@
-# 🧠 MLOps Project – LPak Classifier  
-**Tác giả:** Lưu Phạm Anh Kiệt  
+# 🧠 MLOps Project – nnc Classifier  
+**Tác giả:** Nguyễn Nhất Chính  
 **Trường:** FSB – Master of Software Engineering  
 **Môn học:** MLOps  
 **Deadline:** 17/11/2025  
@@ -117,7 +117,7 @@ Load model từ:
 
 python
 Copy code
-mlflow.pyfunc.load_model("models:/lpak_classifier/1")
+mlflow.pyfunc.load_model("models:/nnc_classifier/1")
 Giao diện web (flask_app/templates/index.html):
 Form nhập 10 giá trị f1–f10 → trả về kết quả phân loại (0 hoặc 1).
 
@@ -158,12 +158,12 @@ Build image:
 
 bash
 Copy code
-docker build -t lpak-mlops .
+docker build -t nnc-mlops .
 Chạy container:
 
 bash
 Copy code
-docker run -p 5000:5000 lpak-mlops
+docker run -p 5000:5000 nnc-mlops
 Truy cập:
 👉 http://127.0.0.1:5000
 
@@ -200,7 +200,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/lpak-mlops:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nnc-mlops:latest
 ✅ Khi push code → GitHub tự:
 
 Build image
@@ -210,15 +210,15 @@ Login Docker Hub bằng token
 Push image mới lên Docker Hub
 
 Xem image tại:
-🔗 https://hub.docker.com/repository/docker/kietlpa/lpak-mlops
+🔗 https://hub.docker.com/repository/docker/kietlpa/nnc-mlops
 
 🐋 Bước 6: Chạy image trực tiếp từ Docker Hub
 Không cần build lại, chỉ cần:
 
 bash
 Copy code
-docker pull kietlpa/lpak-mlops:latest
-docker run -d -p 5000:5000 kietlpa/lpak-mlops:latest
+docker pull kietlpa/nnc-mlops:latest
+docker run -d -p 5000:5000 kietlpa/nnc-mlops:latest
 Sau khi chạy:
 → Mở http://localhost:5000
 → Giao diện Flask hiển thị form nhập liệu và kết quả dự đoán.
@@ -236,7 +236,7 @@ Ví dụ:
 
 bash
 Copy code
-docker run -d -p 80:5000 kietlpa/lpak-mlops:latest
+docker run -d -p 80:5000 kietlpa/nnc-mlops:latest
 Ứng dụng sau khi deploy có thể truy cập công khai qua domain cloud provider.
 
 🧾 Tổng kết
@@ -246,5 +246,5 @@ Model Registry	✅	Lưu phiên bản model
 Flask Web App	✅	Giao diện dự đoán
 Dockerfile	✅	Build ổn định
 CI/CD GitHub Actions	✅	Tự động push Docker Hub
-Docker Hub Repo	✅	kietlpa/lpak-mlops
+Docker Hub Repo	✅	kietlpa/nnc-mlops
 Bonus Cloud Deploy	🔜	Có thể triển khai thêm
