@@ -1,0 +1,15 @@
+creation_timestamp: 1763192623757
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1763192623757
+model_id: m-8274cf80798d4a97a250650a7007303d
+name: nnc_classifier
+run_id: 7ea6707946af4a8a953c2d21e4ab9947
+run_link: null
+source: models:/m-8274cf80798d4a97a250650a7007303d
+status: READY
+status_message: null
+storage_location: file:///D:/FSB_MSE/ML DevOps/MLOps_nnc/mlruns/461023350219869815/models/m-8274cf80798d4a97a250650a7007303d/artifacts
+user_id: null
+version: 1

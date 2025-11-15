@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/FSB_MSE/ML DevOps/MLOps_nnc/mlruns/461023350219869815/4f8e66f9f5cd4106859d8e05a9c1bcc1/artifacts
+end_time: 1763192620270
+entry_point_name: ''
+experiment_id: '461023350219869815'
+lifecycle_stage: active
+run_id: 4f8e66f9f5cd4106859d8e05a9c1bcc1
+run_name: secretive-squid-176
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763192617228
+status: 3
+tags: []
+user_id: ROG Strix G614
