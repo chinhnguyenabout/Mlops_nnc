@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/FSB_MSE/ML DevOps/MLOps_nnc/mlruns/461023350219869815/e651b65d26bd48b38d13a7999c191522/artifacts
+end_time: 1763381066720
+entry_point_name: ''
+experiment_id: '461023350219869815'
+lifecycle_stage: active
+run_id: e651b65d26bd48b38d13a7999c191522
+run_name: efficient-skink-385
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763381064034
+status: 3
+tags: []
+user_id: CHINHDEPTRAI

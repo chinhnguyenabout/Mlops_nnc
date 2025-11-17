@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/FSB_MSE/ML DevOps/MLOps_nnc/mlruns/461023350219869815/43d626a4f7c34699b44c29e3fa2a58c6/artifacts
+end_time: 1763380142621
+entry_point_name: ''
+experiment_id: '461023350219869815'
+lifecycle_stage: active
+run_id: 43d626a4f7c34699b44c29e3fa2a58c6
+run_name: vaunted-bird-84
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763380139815
+status: 3
+tags: []
+user_id: CHINHDEPTRAI

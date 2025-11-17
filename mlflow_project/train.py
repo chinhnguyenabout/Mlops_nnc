@@ -1,21 +1,29 @@
+from pathlib import Path
+
 import mlflow
 import mlflow.sklearn
-from sklearn.datasets import make_classification
+import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score
-import numpy as np
+
+from mlflow_project.data_generator import generate_classification_data
+
+DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "classification_data.csv"
 
 mlflow.set_tracking_uri("file:./mlruns")  # Lưu log cục bộ
 mlflow.set_experiment("nnc_classification")
 
 def train_and_log_model(n_estimators, max_depth):
-    X, y = make_classification(
-        n_samples=1000,
-        n_features=10,
-        n_classes=2,
-        random_state=42
-    )
+    if DATA_PATH.exists():
+        df = pd.read_csv(DATA_PATH)
+        print(f"[LOAD] Loaded existing dataset from {DATA_PATH}")
+    else:
+        df, saved = generate_classification_data(save_path=DATA_PATH)
+        print(f"[NEW] Generated dataset and saved to {saved}")
+
+    X = df.drop(columns=["target"]).values
+    y = df["target"].values
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     with mlflow.start_run():
@@ -57,4 +65,4 @@ if __name__ == "__main__":
         "nnc_classifier"
     )
 
-    print(f"✅ Best model logged & registered from run {best_run}")
+    print(f"[BEST] Model logged & registered from run {best_run}")
