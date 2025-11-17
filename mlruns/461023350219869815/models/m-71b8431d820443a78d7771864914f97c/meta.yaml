@@ -1,0 +1,10 @@
+artifact_location: file:///D:/FSB_MSE/ML DevOps/MLOps_nnc/mlruns/461023350219869815/models/m-71b8431d820443a78d7771864914f97c/artifacts
+creation_timestamp: 1763381690418
+experiment_id: '461023350219869815'
+last_updated_timestamp: 1763381693692
+model_id: m-71b8431d820443a78d7771864914f97c
+model_type: null
+name: nnc_model
+source_run_id: 4f397f19b47145f6acb79ffaa970301e
+status: 2
+status_message: null

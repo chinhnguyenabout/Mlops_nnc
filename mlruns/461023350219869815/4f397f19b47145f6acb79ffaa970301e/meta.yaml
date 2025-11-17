@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/FSB_MSE/ML DevOps/MLOps_nnc/mlruns/461023350219869815/4f397f19b47145f6acb79ffaa970301e/artifacts
+end_time: 1763381693712
+entry_point_name: ''
+experiment_id: '461023350219869815'
+lifecycle_stage: active
+run_id: 4f397f19b47145f6acb79ffaa970301e
+run_name: rogue-tern-332
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763381690297
+status: 3
+tags: []
+user_id: CHINHDEPTRAI
