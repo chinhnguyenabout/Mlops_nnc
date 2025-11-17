@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/FSB_MSE/ML DevOps/MLOps_nnc/mlruns/461023350219869815/1685b863af6b46ea8d81d31313e3c12e/artifacts
+end_time: 1763391848732
+entry_point_name: ''
+experiment_id: '461023350219869815'
+lifecycle_stage: active
+run_id: 1685b863af6b46ea8d81d31313e3c12e
+run_name: aged-shoat-418
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763391846136
+status: 3
+tags: []
+user_id: CHINHDEPTRAI
